@@ -35,16 +35,15 @@ class CalendarsController < ApplicationController
       end
 
 
-      wday_num = @todays_date.wday # wdayメソッドを用いて取得した数値
-      wday_num += x
+      wday_num = @todays_date.wday + x  # wdayメソッドを用いて取得した数値
 
       if wday_num >= 7 #「wday_numが7以上の場合」という条件式
         wday_num = wday_num - 7
       end
 
-      days = { :month => (@todays_date + x).month, :date => (@todays_date + x).day, :plans => today_plans, :wday => wdays[wday_num] } # wdaysから値を取り出す記述
+      days = { month: (@todays_date + x).month, date: (@todays_date + x).day, plans: today_plans, wday: wdays[wday_num] } # wdaysから値を取り出す記述
 
-
+      @week_days.push(days)
     end
 
   end
