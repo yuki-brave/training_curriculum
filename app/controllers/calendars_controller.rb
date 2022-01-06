@@ -23,7 +23,6 @@ class CalendarsController < ApplicationController
 
     # Dateオブジェクトは、日付を保持しています。下記のように`.today.day`とすると、今日の日付を取得できます。
     @todays_date = Date.today
-    # 例) 今日が2月1日の場合・・・ Date.today.day => 1日
 
     @week_days = []
 
@@ -36,6 +35,8 @@ class CalendarsController < ApplicationController
       end
 
       wday_num = @todays_date.wday # wdayメソッドを用いて取得した数値
+      wday_num += x
+
       if wday_num >= 7 #「wday_numが7以上の場合」という条件式
         wday_num = wday_num - 7
       end
