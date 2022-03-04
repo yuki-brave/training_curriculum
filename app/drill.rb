@@ -1,12 +1,13 @@
-def search(target_num, input)
-  input.each_with_index do |num, i|
-    if num == target_num
-      puts "#{i + 1}番目です"
-      return
-    end
+def check_name(str) 
+  if  str.include?(".")
+    puts "!エラー!記号は登録できません"
+  elsif str.include?(" ")
+    puts "!エラー!空白は登録できません"
+  else
+    puts "登録が完了しました"
   end
-  puts "その数は含まれていません"
 end
 
-input = [3, 5, 9 ,12, 15, 21, 29, 35, 42, 51, 62, 78, 81, 87, 92, 93]
-search(11, input)
+puts "登録したい名前を入力してください"
+str = gets
+check_name(str) 
