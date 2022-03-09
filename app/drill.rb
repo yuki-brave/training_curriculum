@@ -1,7 +1,12 @@
-def missing_char(str, n)
-  str.slice!(n - 1)
-  puts str
+def police_trouble(a, b)
+  if (a && b) || (!a && !b)
+    puts "True"
+  else
+    puts "False"
+  end
 end
 
-# 呼び出し例（1つ目の引数には対象となる文字列を、2つ目の引数には対象となる文字列から何番目の文字を削除するのかを指定しましょう）
-missing_char('kitten', 1)
+# 呼び出し例
+police_trouble(true, true) 
+police_trouble(false, false)
+police_trouble(true, false) 
