@@ -1,5 +1,10 @@
-def count_hi(str)
-  puts str.scan("hi").length
+def parrot_trouble(talking, hour)
+  if talking || (hour >= 20 || hour <= 7)
+    puts "NG"
+  else
+    puts "OK"
+  end
 end
 
-count_hi('abc hi ho')
+# 呼び出し例
+parrot_trouble(true, 6)
