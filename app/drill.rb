@@ -1,10 +1,12 @@
-def parrot_trouble(talking, hour)
-  if talking || (hour >= 20 || hour <= 7)
-    puts "NG"
-  else
-    puts "OK"
+def count_evens(attr)
+  count = 0
+  attr.each do |i|
+    if i.even?
+      count += 1
+    end
   end
+  puts count
 end
-
 # 呼び出し例
-parrot_trouble(true, 6)
+attr = [2, 1, 2, 3, 4, 6]
+count_evens(attr)
