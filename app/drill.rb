@@ -1,12 +1,10 @@
-def count_evens(attr)
-  count = 0
-  attr.each do |i|
-    if i.even?
-      count += 1
-    end
+def array123(nums)
+  if nums.include?(1) && nums.include?(2) && nums.include?(3) 
+    puts "True"
+  else
+    puts "False"
   end
-  puts count
 end
+
 # 呼び出し例
-attr = [2, 1, 2, 3, 4, 6]
-count_evens(attr)
+array123([1, 1, 2, 3, 1])
