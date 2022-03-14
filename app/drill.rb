@@ -1,10 +1,10 @@
-def array123(nums)
-  if nums.include?(1) && nums.include?(2) && nums.include?(3) 
-    puts "True"
+def sleep_in(is_weekday, is_vacation)
+  if (is_weekday != true) || (is_vacation == true)
+    puts true
   else
-    puts "False"
+    puts false
   end
 end
 
 # 呼び出し例
-array123([1, 1, 2, 3, 1])
+sleep_in(false, false)
