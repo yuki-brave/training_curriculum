@@ -1,10 +1,9 @@
-def sleep_in(is_weekday, is_vacation)
-  if (is_weekday != true) || (is_vacation == true)
-    puts true
-  else
-    puts false
-  end
-end
+puts "二桁の整数を入力してください"
+i = gets.to_i
 
-# 呼び出し例
-sleep_in(false, false)
+a = i % 10
+b = i / 10
+
+calc = (a + b) + a * b
+
+puts "足し算結果と掛け算結果の合計値は#{calc}です"
