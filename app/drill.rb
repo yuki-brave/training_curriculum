@@ -1,9 +1,7 @@
-puts "二桁の整数を入力してください"
-i = gets.to_i
+def extra_end(str)
+  a = str.slice(-2,2)
+  puts a * 3
+end
 
-a = i % 10
-b = i / 10
-
-calc = (a + b) + a * b
-
-puts "足し算結果と掛け算結果の合計値は#{calc}です"
+# 呼び出し例
+extra_end('Hello')
