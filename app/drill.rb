@@ -1,7 +1,12 @@
-def extra_end(str)
-  a = str.slice(-2,2)
-  puts a * 3
+def num(a, b, c)
+  ab = a + b
+  if c <= 3
+    puts ab / c
+  else
+    puts ab * c
+  end
 end
 
 # 呼び出し例
-extra_end('Hello')
+num(1,5,3) 
+num(1,5,5)
