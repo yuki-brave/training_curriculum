@@ -1,12 +1,16 @@
-def num(a, b, c)
-  ab = a + b
-  if c <= 3
-    puts ab / c
+def calculate_points(amount, is_birthday)
+  if amount >= 1000
+    point = amount * 0.05
   else
-    puts ab * c
+    point = amount * 0.03
   end
+
+  if is_birthday
+    point *= 5
+  end
+
+  puts "ポイントは#{point.floor}点です"
 end
 
 # 呼び出し例
-num(1,5,3) 
-num(1,5,5)
+calculate_points(3000, true)
