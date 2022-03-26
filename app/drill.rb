@@ -1,14 +1,15 @@
-def withdraw(balance, amount)
-  fee = 110
-  calc = balance - amount - fee
-  if  calc >= 0
-    puts "#{amount}円引き落としました。残高は#{calc}円です"
-  else
-    puts "残高不足です"
+def lone_sum(ary)
+  nums = []
+  nums << ary[0] if ary[0] != ary[1] && ary[0] != ary[2]
+  nums << ary[1] if ary[1] != ary[0] && ary[1] != ary[2]
+  nums << ary[2] if ary[2] != ary[0] && ary[2] != ary[1]
+
+  calc = 0
+  nums.each do |num|
+    calc += num
   end
+  puts calc
 end
 
-balance = 100000
-puts "いくら引き落としますか？（て終了110円かかります）"
-amount = gets.to_i
-withdraw(balance, amount)
+# 呼び出し例
+lone_sum([1, 2, 3])
